@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class FilterComponent {
    value : string = '';
+
+   @Input() text!:string;
+   @Output() textChanged = new EventEmitter<String>()
+
+   sendValue() {
+    this.textChanged.emit(this.value);
+    this.value = '';
+  }
 }

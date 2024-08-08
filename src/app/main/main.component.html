@@ -1,2 +1,8 @@
-<app-filter></app-filter>
-<app-list></app-list>
+<app-filter (textChanged)="getTextChanged($event)"></app-filter>
+<div *ngIf="showNoResultsMessage" class="no-results-message">
+    Esa combinación de caracteres no existe.
+  </div>
+
+<app-list [elements]="elements" (itemSelected)="getItemSelect($event)"></app-list>
+
+

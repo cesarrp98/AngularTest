@@ -12,18 +12,21 @@ import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     FilterComponent,
-    ListComponent
+    ListComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule
+    MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule,MatListModule,FormsModule
   ],
   providers: [
     provideAnimationsAsync()
